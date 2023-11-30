@@ -1,0 +1,20 @@
+{
+  "name": "htwf-project",
+  "version": "1.0.0",
+  "description": "This is the project for IS403 by Andrew Naumann",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "knex": "^3.0.1",
+    "openai": "^4.20.1",
+    "pg": "^8.11.3",
+    "postgres": "^3.4.0"
+  }
+}

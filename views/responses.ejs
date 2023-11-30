@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responses</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      .navbar {
+        background-color: #333;
+        overflow: hidden;
+      }
+
+      .navbar a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      h1 {
+        text-align: center;
+        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      .entry {
+        max-width: 20rem;
+        padding: 2rem;
+        margin: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        text-align: center;
+      }
+
+      .entry h4 {
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .entry p {
+        color: #666;
+        margin-bottom: 5px;
+      }
+
+      #response {
+        font-weight: bold;
+        color: #000;
+      }
+
+      .main {
+        padding-left: 3rem;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="/">Home</a>
+      <a href="/responses">Responses</a>
+    </div>
+    <h1>Entries</h1>
+    <div class="main">
+      <% for (let i=0; i < aResponses.length; i++) { %>
+
+      <div class="entry">
+        <h4><%= aResponses[i].r_date %></h4>
+        <b><p><%= aResponses[i].p_name%></p></b>
+        <p id="response"><%= aResponses[i].r_input %></p>
+        <p>-<%= aResponses[i].user_name%></p>
+      </div>
+      <br />
+
+      <% } %>
+    </div>
+  </body>
+</html>
